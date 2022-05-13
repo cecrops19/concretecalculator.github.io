@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cost Calculator</title>
+  <link rel="stylesheet" href="slidecontainer.css">
+</head>
+
+<meta charset="utf-8" />
+<script src="https://cdn.anychart.com/releases/8.11.0/js/graphics.min.js"></script>
+
+<!--<script src="add_image.js"></script>-->
+
+
+
+
+  <div class="page">
+
+    
+
+    <body>
+
+    <div class="questions">
+
+      <h1>Cost Calculator</h1>
+
+     <form action="">
+        <div>
+         <div class="buildingtype">
+          <fieldset>
+            <legend>
+              Building Type:
+            </legend>
+               <select name="type" id="type">
+                 <option value="select">Select Building Type</option>
+                 <option value="barn">Barn</option>
+                 <option value="commercial">Commercial</option>
+                 <option value="Standard">Standard</option>
+               </select>
+          </fieldset>
+         </div>
+  <br><br>
+         <div class="riskcategory">
+          <fieldset>
+            <legend>
+              Risk Category
+            </legend>
+                 <select name="risk" id="risk">
+                   <option value="selectcat">Select Risk Category</option>
+                   <option value="1">Category 1</option>
+                   <option value="2">Category 2</option>
+                 </select>
+          </fieldset>
+         </div>
+
+  <br><br>
+         <div class="leantos">
+          <fieldset>
+            <legend>
+              Building Lean-To's
+            </legend>
+                  <select name="leanto" id="leanto">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+          </fieldset>
+         </div>
+
+  <br><br>
+         <div class="siding">
+          <fieldset>
+            <legend>
+              Building Siding
+            </legend>
+                   <select name="siding" id="siding">
+                     <option value="selectsiding"selected>Select Buildng Siding</option>
+                     <option value="horizontal">Horizontal</option>
+                     <option value="vertical">Vertical</option>
+                   </select>
+          </fieldset>
+         </div>
+        </div>
+                <div class="floorplan">
+          <fieldset>
+            <legend>
+              Drag the slider to select your size of Building
+            </legend>
+            <div class="slidecontainer">
+                 <input type="range" min="1" max="100" value="10" class="slider" id="Length" oninput="myfunc()">
+                <p>Width: <span id="x"></span></p>
+            </div>
+      
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="10" class="slider" id="Width" oninput="myfunc()">
+                 <p>Length: <span id="y"></span></p>
+            </div>
+        </div>
+    </div>
+
+  <br><br>
+
+
+        <h2 style="margin-left: 600px;">Concrete Slab Length and Width</h2>
+              <div class="stagecontainer">
+                <span id="stage-container"></span>
+                <div class="imagecontainer">
+                  <div class="horimage";>
+                    <img id="imghorizontal" src="images/H_footer.jpg"  onchange="toggleVisibility('imghorizontal');" />
+                  </div>
+              </div>
+
+          </fieldset>
+        
+
+
+          <div> 
+            <script src="slider2 copy.js"></script>
+         </div> 
+
+
+
+
+         <div class="verimage";>
+           <img id="imgvertical" src="images/V_footer.jpg"  onChange="toggleVisibility('imgvertical');" />
+         </div>
+        </div>
+
+
+        <script>
+
+        </script>
+
+
+
+
+
+
+<!--<div id="image-container"></div>-->
+
+
+
+
+
+        </div>
+
+
+
+
+
+          <script type="text/javascript">
+	        const lencon = document.querySelector('.stagecontainer');
+	        const calength = lencon.nextElementSibling;
+	        console.log(calength);
+          </script>
+
+
+   </form>
+
+  </body>
+  </div>
+</html>
